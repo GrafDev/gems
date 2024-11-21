@@ -88,7 +88,7 @@ class Reel {
     }
 
     playSpinSound() {
-        const soundPath = '/assets/sound/start-sound.mp3';
+        const soundPath = 'assets/sound/start-sound.mp3';
         const sound = new Audio(soundPath);
         sound.muted = false;
         sound.currentTime = 0.1;
@@ -285,7 +285,7 @@ class Slot {
     }
 
     playWinSound() {
-        const winSound = new Audio('/assets/sound/win-sound.mp3');
+        const winSound = new Audio('assets/sound/win-sound.mp3');
         winSound.currentTime = 0;
         winSound.muted = true;
         winSound.play()
@@ -318,7 +318,7 @@ class Slot {
 
 // Инициализация
 document.getElementById('go-btn').addEventListener('click', () => {
-    const startSound = new Audio('/assets/sound/start-sound.mp3');
+    const startSound = new Audio('assets/sound/start-sound.mp3');
     startSound.currentTime = 0;
     startSound.play().catch(error => {
         console.error('Error playing start sound:', error);

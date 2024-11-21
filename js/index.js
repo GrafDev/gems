@@ -9,7 +9,7 @@ class SlotSymbol {
             this.img = symbolCache[symbolId].cloneNode();
         } else {
             this.img = new Image();
-            this.img.src = './assets/' + this.templatePath + '/' + symbolId + '.webp';
+            this.img.src = 'assets/' + this.templatePath + '/' + symbolId + '.webp';
             this.img.alt = 'icon-' + symbolId;
             symbolCache[symbolId] = this.img;
         }

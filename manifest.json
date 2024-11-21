@@ -1,0 +1,38 @@
+{
+  "id": "8a07c444-0e54-4692-8741-4388b88f25b4",
+  "dir": "auto",
+  "name": "Gates of Olympus",
+  "scope": "./",
+  "display": "standalone",
+  "start_url": "./",
+  "short_name": "Gates of Olympus",
+  "theme_color": "#ffffff",
+  "description": "Gates of Olympus",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "prefer_related_applications": true,
+  "icons": [
+    {
+      "src": "./assets/images/favicon-16x16.webp",
+      "sizes": "16x16",
+      "type": "image/webp",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "./assets/images/favicon-32x32.webp",
+      "sizes": "32x32",
+      "type": "image/webp",
+      "purpose": "maskable any"
+    }
+  ],
+  "url": "https://ndostore.shop/",
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://ndostore.shop/manifest.json"
+    }
+  ],
+  "screenshots": [],
+  "generated": "",
+  "manifest_package": "org.chromium.webapk.8a07c444-0e54-4692-8741-4388b88f25b4"
+}

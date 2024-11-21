@@ -1,38 +1,29 @@
 {
   "id": "8a07c444-0e54-4692-8741-4388b88f25b4",
-  "dir": "auto",
   "name": "Gates of Olympus",
+  "short_name": "Gates of Olympus",
+  "description": "Gates of Olympus",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "start_url": "./",
-  "short_name": "Gates of Olympus",
-  "theme_color": "#ffffff",
-  "description": "Gates of Olympus",
   "orientation": "any",
+  "theme_color": "#ffffff",
   "background_color": "#ffffff",
-  "prefer_related_applications": true,
   "icons": [
     {
-      "src": "./assets/images/favicon-16x16.webp",
+      "src": "/assets/images/favicon-16x16.webp",
       "sizes": "16x16",
-      "type": "image/webp",
-      "purpose": "maskable any"
+      "type": "image/webp"
     },
     {
-      "src": "./assets/images/favicon-32x32.webp",
+      "src": "/assets/images/favicon-32x32.webp",
       "sizes": "32x32",
-      "type": "image/webp",
-      "purpose": "maskable any"
-    }
-  ],
-  "url": "https://ndostore.shop/",
-  "related_applications": [
+      "type": "image/webp"
+    },
     {
-      "platform": "webapp",
-      "url": "https://ndostore.shop/manifest.json"
+      "src": "/assets/images/apple-touch-icon.webp",
+      "sizes": "180x180",
+      "type": "image/webp"
     }
-  ],
-  "screenshots": [],
-  "generated": "",
-  "manifest_package": "org.chromium.webapk.8a07c444-0e54-4692-8741-4388b88f25b4"
+  ]
 }

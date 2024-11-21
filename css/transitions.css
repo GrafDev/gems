@@ -1,0 +1,181 @@
+/* Base transitions */
+.body-wrapper {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.body-wrapper.is--visible {
+    opacity: 1;
+}
+
+/* Logo transitions */
+.logo {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in-out,
+    transform 0.8s ease-in-out;
+}
+
+.is--visible .logo {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+/* Characters transitions */
+.left__person,
+.right__person {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in-out,
+    transform 0.8s ease-in-out;
+}
+
+.is--visible .left__person,
+.is--visible .right__person {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+
+/* Slot transitions */
+#slot {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in-out,
+    transform 0.8s ease-in-out;
+}
+
+.is--visible #slot {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+/* Bottom section transitions */
+.bottom__section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in-out,
+    transform 0.8s ease-in-out;
+}
+
+.is--visible .bottom__section {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s;
+}
+
+/* Modal transitions */
+.modal {
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.is--modal-open .modal {
+    transform: scale(1);
+}
+
+.is--modal-open #slot {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Win state transitions */
+.bottom__section-title {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.bottom__section-title.win__show {
+    opacity: 1;
+}
+
+/* Effects transitions */
+.win-animation-svg {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.win-animation-svg.is--active {
+    opacity: 1;
+}
+
+.effects {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.effects.visible {
+    opacity: 1;
+}
+
+/* Button transitions */
+.bottom__section-button:disabled {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.bottom__section-button-next,
+.bottom__section-button-default {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.bottom__section-button-next.hidden,
+.bottom__section-button-default.hidden {
+    opacity: 0;
+}
+
+/* Animation images transitions */
+.animation-images__item {
+    transition: transform 0.3s ease-out,
+    opacity 0.3s ease-out;
+}
+
+/* State transitions */
+.body-wrapper {
+    transition: opacity 0.8s ease-in-out;
+}
+
+.is--winner .bottom__section {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Mobile transitions */
+@media (max-width: 767px) {
+    .is--modal-open .right__person {
+        transition: right 0.3s ease-in-out,
+        bottom 0.3s ease-in-out;
+    }
+
+    .animation-images__item {
+        transition: transform 0.2s ease-out,
+        opacity 0.2s ease-out;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .body-wrapper,
+    .logo,
+    .left__person,
+    .right__person,
+    #slot,
+    .bottom__section,
+    .modal,
+    .effects,
+    .animation-images__item,
+    .bottom__section-button,
+    .win-animation-svg {
+        transition: none !important;
+    }
+}
+
+/* Hover effects - только для устройств с hover */
+@media (hover: hover) {
+    .bottom__section-button:hover {
+        transform: translateY(-2px);
+        transition: transform 0.2s ease-out;
+    }
+}

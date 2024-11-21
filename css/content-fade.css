@@ -1,0 +1,60 @@
+.body-wrapper {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.body-wrapper.is--visible {
+    opacity: 1;
+}
+
+.logo,
+.left__person,
+.right__person,
+#slot,
+.bottom__section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.is--visible .logo {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+.is--visible .left__person,
+.is--visible .right__person {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+.is--visible #slot {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+
+.is--visible .bottom__section {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+
+/* Добавляем стили для модального окна */
+.is--modal-open #slot:not(.is--winner) {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.is--modal-open #slot.is--winner {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Правило для сохранения видимости барабанов при выигрыше */
+.is--modal-open #slot.is--winner .reel {
+    opacity: 1;
+    visibility: visible;
+}

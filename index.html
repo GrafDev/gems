@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.9, maximum-scale=0.9, minimum-scale=0.9, viewport-fit=cover">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=0.9, maximum-scale=0.9, minimum-scale=0.9, viewport-fit=cover">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" data-qmeta="equiv">
     <meta name="theme-color" content="#FFFFFF">
     <meta name="google" value="notranslate">
@@ -19,6 +20,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.webp">
     <link rel="mask-icon" href="https://ndostore.shop/assets/images/safari-pinned-tab.svg" color="#5bbad5">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/loader.css" rel="stylesheet">
+    <link href="css/dev-mode.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+<!--    <link href="css/content-fade.css" rel="stylesheet">-->
     <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
 
     <style>
@@ -32,9 +37,11 @@
         .loader {
             background: linear-gradient(180deg, #9E8FE7 0%, #F189C3 100%);
         }
+
         .loader__progress-line {
             background: linear-gradient(to right, #53177F, #DD4EFF);
         }
+
         .loader__progress {
             background: linear-gradient(304deg, #FFF6BC 0%, #E4AC28 35%, #D04B00 49%, #E07900 63%, #FDEAAC 100%);
         }
@@ -43,106 +50,12 @@
     <script src="sw.js"></script>
 </head>
 <body>
-<style>
-.loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 999;
-    width: 100%;
-    height: 100vh;
-    padding: 15px;
-    display: flex;
-}
-.loader.is--loaded {
-    display: none;
-}
-.loader__logo {
-    margin-bottom: 35px;
-    width: 100%;
-    max-width: 400px;
-}
-.loader__progress {
-    width: 100%;
-    height: 28px;
-    max-width: 340px;
-    padding: 4px;
-    border-radius: 100px;
-    position: relative;
-}
-.loader__progress::before {
-    position: absolute;
-    content: '';
-    left: 4px;
-    top: 4px;
-    border-radius: 100px;
-    width: calc(100% - 8px);
-    height: calc(100% - 8px);
-    background-color: #fff;
-}
-.loader__progress-line {
-    position: relative;
-    z-index: 2;
-    width: 0;
-    height: 100%;
-    border-radius: 100px;
-    transition: width 0.5s ease;
-}
-@media (max-width: 767px) {
-    .loader__progress {
-        max-width: 220px;
-    }
-}
-</style>
 <div class="loader">
     <img class="loader__logo" src="assets/images/logo.webp" alt="logo">
     <div class="loader__progress">
         <div class="loader__progress-line"></div>
     </div>
 </div>
-<script>
-  let progressInterval = null;
-  const progressLine = document.querySelector('.loader__progress-line');
-  const loader = document.querySelector('.loader');
-
-  function increaseLoaderProgress() {
-    let width = 0;
-    progressInterval = setInterval(() => {
-      if (width >= 99) {
-        progressLine.style.width = '100%';
-      } else {
-        width += 2;
-        progressLine.style.width = width + '%';
-      }
-    }, 1000);
-  }
-
-  increaseLoaderProgress();
-
-  function addLoadedClass() {
-    loader.classList.add('is--loaded');
-  }
-
-  function setLoaderProgressTo100() {
-    setTimeout(() => {
-      progressLine.style.width = '100%';
-      clearInterval(progressInterval);
-      setTimeout(() => {
-        addLoadedClass();
-      }, 800)
-    }, 600)
-  }
-
-  window.addEventListener('load', setLoaderProgressTo100);
-</script>
-
-
-
 <div class="body-wrapper">
     <div class="left__person">
         <img src="assets/images/left-person.webp" alt="left-person">
@@ -163,218 +76,88 @@
     <img src="assets/images/logo.webp" class="logo" alt="">
     <div id="slot" data-spin="1">
         <div class="background"></div>
-        <div id="reels" data-template="gatesOfOlympusSlot">
-    <div class="reel"></div>
-    <div class="reel"></div>
-    <div class="reel"></div>
-    <div class="reel"></div>
-    <div class="reel"></div>
-</div>
+        <div id="reels" data-template="images">
+            <div class="reel"></div>
+            <div class="reel"></div>
+            <div class="reel"></div>
+            <div class="reel"></div>
+            <div class="reel"></div>
+        </div>
 
     </div>
     <div class="bottom__section">
         <div class="bottom__section-title" id="win-section"></div>
-        
-    <button class="bottom__section-button pulse" id="go-btn" data-spins="1">
-        <span class="bottom__section-button-default" id="go-btn-default-text"> শুরু করুন</span>
-        <span class="bottom__section-button-next" id="go-btn-next-text"> শুরু করুন</span>
-    </button>
+
+        <button class="bottom__section-button pulse" id="go-btn" data-spins="1">
+            <span class="bottom__section-button-default" id="go-btn-default-text"> শুরু করুন</span>
+            <span class="bottom__section-button-next" id="go-btn-next-text"> শুরু করুন</span>
+        </button>
 
 
     </div>
-    
-        <div class="modal" id="modal">
-            <div class="modal__container">
-                <div class="modal__title">
-                    <span>তুমি জিতেছ</span>
-                </div>
-                <div class="modal__text">
-                    <span>স্বাগতম বোনাস %700:</span>
-                </div>
-                
-    <a href="win_button.html" id="win-button-modal" class="bottom__section-button is--link">
-        <span>বোনাস দাবি করুন</span>
-        <div class="button-loader">
-            <span></span>
-        </div>
-    </a>
 
-
+    <div class="modal" id="modal">
+        <div class="modal__container">
+            <div class="modal__title">
+                <span>তুমি জিতেছ</span>
             </div>
+            <div class="modal__text">
+                <span>স্বাগতম বোনাস %700:</span>
+            </div>
+
+            <a href="pages/win-button-page.html" id="win-button-modal" class="bottom__section-button is--link">
+                <span>বোনাস দাবি করুন</span>
+                <div class="button-loader">
+                    <span></span>
+                </div>
+            </a>
+
+
         </div>
-    
+    </div>
+
     <div class="effects hidden">
-        <img loading="lazy" class="effects__image hidden" id="effects-image" src="assets/effects/descktop_strike_flashing.gif" alt="red_flare">
+        <img loading="lazy" class="effects__image hidden" id="effects-image"
+             src="assets/effects/descktop_strike_flashing.gif" alt="red_flare">
     </div>
 </div>
-<div class="devMode dev-mode" id="devMode">
-    <button class="menu-button" id="toggleMenu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 20 20" fill="none" class="open">
-            <path fill="currentColor" fill-rule="evenodd" d="M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z"/>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" class="close" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-    </button>
-    <div class="dev-mode__wrapper" id="settingsWrapper">
-        <form id="settingsForm">
-            <textarea id="settingsTextarea" rows="10" cols="30"></textarea>
-            <br>
-            <button type="button" id="getSettings">Отримати</button>
-            <button type="button" id="submitSettings">Оновити</button>
-        </form>
-    </div>
-</div>
-<style>
-    .dev-mode {
-        visibility: hidden;
-        display: none;
-    }
-    .dev-mode.is--active {
-        visibility: visible;
-        display: flex;
-    }
-    .dev-mode .menu-button  {
-        font-size: 20px;
-        color: #fff;
-        background: transparent;
-        box-shadow: none;
-        border: none;
-        position: fixed;
-        right: 10px;
-        top: 10px;
-        z-index: 999;
-        cursor: pointer;
-    }
-    .dev-mode .menu-button svg {
-        fill: #fff;
-        width: 30px;
-        height: 30px;
-    }
-    .dev-mode .menu-button .close {
-        display: none;
-    }
-    .dev-mode .menu-button.is--open .close {
-        display: flex;
-    }
-    .dev-mode .menu-button.is--open .open {
-        display: none;
-    }
-    .dev-mode {
-    }
-    .dev-mode__wrapper {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        z-index: 998;
-        display: none;
-    }
-    .dev-mode__wrapper.is--open {
-        display: flex;
-    }
-    .dev-mode__wrapper:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0, 0.5);
-        z-index: -1;
-    }
-    .dev-mode__wrapper form {
-        width: 100%;
-        padding: 30px;
-    }
-    .dev-mode__wrapper textarea {
-        width: 100%;
-        height: 500px;
-        margin-bottom: 15px;
-        font-size: 20px;
-    }
-    .dev-mode__wrapper button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-</style>
-<script>
-  function checkDevMode() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const devMode = urlParams.get('devMode');
-    const devModeContainer = document.getElementById('devMode');
+<!--<div class="devMode dev-mode" id="devMode">-->
+<!--    <button class="menu-button" id="toggleMenu">-->
+<!--        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 20 20" fill="none" class="open">-->
+<!--            <path fill="currentColor" fill-rule="evenodd"-->
+<!--                  d="M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z"/>-->
+<!--        </svg>-->
+<!--        <svg xmlns="http://www.w3.org/2000/svg" class="close" viewBox="0 0 384 512">-->
+<!--            &lt;!&ndash;!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.&ndash;&gt;-->
+<!--            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>-->
+<!--        </svg>-->
+<!--    </button>-->
+<!--    <div class="dev-mode__wrapper" id="settingsWrapper">-->
+<!--        <form id="settingsForm">-->
+<!--            <textarea id="settingsTextarea" rows="10" cols="30"></textarea>-->
+<!--            <br>-->
+<!--            <button type="button" id="getSettings">Отримати</button>-->
+<!--            <button type="button" id="submitSettings">Оновити</button>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</div>-->
 
-    if (devMode === 'true') {
-      devModeContainer.classList.add('is--active');
-    } else if (devMode === 'false') {
-      devModeContainer.classList.remove('is--active');
-    }
-  }
-  document.getElementById('toggleMenu').addEventListener('click', () => {
-    const menuButton = document.getElementById('toggleMenu');
-    const menu = document.getElementById('settingsWrapper');
-    menuButton.classList.toggle('is--open');
-    menu.classList.toggle('is--open');
-  });
-  document.getElementById('getSettings').addEventListener('click', async () => {
-    try {
-      const response = await fetch('/settings');
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const data = await response.json();
-      document.getElementById('settingsTextarea').value = JSON.stringify(data, null, 2);
-    } catch (error) {
-      console.error('Error fetching settings:', error);
-    }
-  });
-  document.getElementById('submitSettings').addEventListener('click', async () => {
-    try {
-      const settings = document.getElementById('settingsTextarea').value;
-      const response = await fetch('/settings', {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: settings
-      });
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      window.location.reload();
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  });
-  window.addEventListener('DOMContentLoaded', checkDevMode);
-</script>
-
+<!--<script src="js/dev-mode.js"></script>-->
+<script src="js/loader.js"></script>
 <script src="js/common.js"></script>
 <script src="js/app.js"></script>
 <script src="js/index.js"></script>
 
-    <script>
-      window.uniqueId = 'b5d05afd-bc9b-4718-9f88-3d0b257de36d';
-    </script>
+<script>
+    window.uniqueId = 'b5d05afd-bc9b-4718-9f88-3d0b257de36d';
+</script>
 
 
-    <script>
-      window.redirect = '/r/1732208943?_lguid=b5d05afd-bc9b-4718-9f88-3d0b257de36d';
-      window.isPushShow = true;
-      window.isPwaShow = 1;
-    </script>
-
-
-
-
+<script>
+    window.redirect = '/r/1732208943?_lguid=b5d05afd-bc9b-4718-9f88-3d0b257de36d';
+    window.isPushShow = true;
+    window.isPwaShow = 1;
+</script>
 
 
 </body>

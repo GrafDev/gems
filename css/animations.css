@@ -1,0 +1,320 @@
+@keyframes rotation-loader {
+    0% {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes spinTo1 {
+    0% {
+        -webkit-transform: rotate(-44deg);
+        transform: rotate(-44deg)
+    }
+    to {
+        transform: rotate(1080deg)
+    }
+}
+
+@-webkit-keyframes spinTo2 {
+    0% {
+        transform: rotate(-4deg)
+    }
+    to {
+        transform: rotate(1396deg)
+    }
+}
+
+@-webkit-keyframes spinTo3 {
+    0% {
+        transform: rotate(-4deg)
+    }
+    to {
+        transform: rotate(1351deg)
+    }
+}
+
+@-webkit-keyframes spinTo4 {
+    0% {
+        transform: rotate(-4deg)
+    }
+    to {
+        transform: rotate(1305deg)
+    }
+}
+
+@-webkit-keyframes spinTo5 {
+    0% {
+        transform: rotate(-4deg)
+    }
+    to {
+        transform: rotate(1261deg)
+    }
+}
+
+@-webkit-keyframes spinTo6 {
+    0% {
+        transform: rotate(-4deg)
+    }
+    to {
+        transform: rotate(1217deg)
+    }
+}
+
+@-webkit-keyframes spinTo7 {
+    0% {
+        transform: rotate(-4deg)
+    }
+    to {
+        transform: rotate(1531deg)
+    }
+}
+
+@-webkit-keyframes spinTo8 {
+    0% {
+        transform: rotate(-4deg)
+    }
+    to {
+        transform: rotate(1485deg)
+    }
+}
+
+@-webkit-keyframes spinner-win {
+    0%, to {
+        transform: rotate(1080deg)
+    }
+    50% {
+        transform: rotate(1085deg)
+    }
+}
+
+@keyframes flip {
+    0% {
+        transform: perspective(800px) scale3d(.85, .85, .85) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg) scaleY(-1);
+        animation-timing-function: ease-out
+    }
+    40% {
+        transform: perspective(800px) scale3d(.85, .85, .85) translate3d(0, 0, 150px) scaleY(-1) rotate3d(0, 1, 0, -190deg);
+        animation-timing-function: ease-out
+    }
+    50% {
+        transform: perspective(800px) scale3d(.85, .85, .85) translate3d(0, 0, 150px) scaleY(-1) rotate3d(0, 1, 0, -170deg);
+        animation-timing-function: ease-in
+    }
+    80% {
+        transform: perspective(800px) scale3d(.8, .8, .8) translate3d(0, 0, 0) scaleY(-1) rotate3d(0, 1, 0, 0deg);
+        animation-timing-function: ease-in
+    }
+    to {
+        transform: perspective(800px) scale3d(.85, .85, .85) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg) scaleY(-1);
+        animation-timing-function: ease-in
+    }
+}
+
+@keyframes kist {
+    50% {
+        transform: translate(-50%, 1%) rotate(-5deg) scale(1.1)
+    }
+}
+
+@keyframes logo {
+    50% {
+        transform: scale(1.1)
+    }
+}
+
+@-webkit-keyframes scaleButton {
+    0%, to {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(.98)
+    }
+}
+
+@-webkit-keyframes spinner {
+    0%, to {
+        -webkit-transform: rotate(-40deg);
+        transform: rotate(-40deg)
+    }
+    50% {
+        -webkit-transform: rotate(-44deg);
+        transform: rotate(-44deg)
+    }
+}
+
+@-webkit-keyframes spin {
+    0%, to {
+        opacity: .5
+    }
+    50% {
+        opacity: .2
+    }
+}
+
+@keyframes zoomInDown {
+    0% {
+        opacity: 0;
+        transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+        animation-timing-function: cubic-bezier(.55, .055, .675, .19)
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+        animation-timing-function: cubic-bezier(.175, .885, .32, 1)
+    }
+}
+
+@keyframes rain {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: .5
+    }
+    20% {
+        opacity: 1
+    }
+    80% {
+        transform: translateY(calc(100vh - 100px)) rotate(360deg);
+        opacity: 1
+    }
+    85% {
+        transform: translateY(calc(100vh - 120px)) rotate(450deg);
+        opacity: 1
+    }
+    to {
+        transform: translateY(calc(100vh + 50px)) rotate(720deg);
+        opacity: 0
+    }
+}
+
+@keyframes headShake {
+    0%, to {
+        transform: scale3d(1, 1, 1)
+    }
+    10%, 20% {
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+    }
+    40%, 60%, 80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+    }
+}
+
+@-webkit-keyframes personAnimation {
+    0% {
+        transform: translateY(0)
+    }
+    40% {
+        transform: translateY(-3%)
+    }
+    60% {
+        transform: translateY(-3)
+    }
+}
+
+@-webkit-keyframes hide {
+    0% {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes fadeDown {
+    0% {
+        opacity: 0;
+        bottom: 40%
+    }
+    40%, 60%, 95% {
+        opacity: 1;
+        bottom: 0
+    }
+    50% {
+        opacity: 1;
+        bottom: 1%
+    }
+    to {
+        opacity: 0;
+        bottom: 0
+    }
+}
+
+@-webkit-keyframes fadeDown2 {
+    0% {
+        opacity: 0;
+        bottom: 40%
+    }
+    40%, 60%, 95% {
+        opacity: 1;
+        bottom: 2%
+    }
+    50% {
+        opacity: 1;
+        bottom: 3%
+    }
+    to {
+        opacity: 0;
+        bottom: 2%
+    }
+}
+
+@-webkit-keyframes fadeDown3 {
+    0% {
+        opacity: 0;
+        bottom: 40%
+    }
+    40%, 60%, 95% {
+        opacity: 1;
+        bottom: 1%
+    }
+    50% {
+        opacity: 1;
+        bottom: 2%
+    }
+    to {
+        opacity: 0;
+        bottom: 1%
+    }
+}
+
+@-webkit-keyframes fadeDown3Mobile {
+    0% {
+        opacity: 0;
+        bottom: 40%
+    }
+    40%, 60%, 95% {
+        opacity: 1;
+        bottom: 10%
+    }
+    50% {
+        opacity: 1;
+        bottom: 11%
+    }
+    to {
+        opacity: 0;
+        bottom: 10%
+    }
+}
+
+@-webkit-keyframes fadeDown2Mobile {
+    0% {
+        opacity: 0;
+        bottom: 40%
+    }
+    40%, 60%, 95% {
+        opacity: 1;
+        bottom: 20%
+    }
+    50% {
+        opacity: 1;
+        bottom: 21%
+    }
+    to {
+        opacity: 0;
+        bottom: 20%
+    }
+}

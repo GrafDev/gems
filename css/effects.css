@@ -1,0 +1,199 @@
+/* Main effects container */
+.effects {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: screen;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+/* Effects block */
+.effects__block {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Animation Images */
+.animation-images {
+    font-size: 50%;
+}
+
+.animation-images__item {
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+    z-index: 1;
+    width: auto;
+    opacity: 0;
+    display: none;
+    transform: scale(0.7);
+    transition: transform 0.3s ease-out;
+}
+
+/* Group 1 - Far elements */
+.animation-images__item.is--group1 {
+    display: block;
+    z-index: 1;
+    transform: scale(0.6);
+}
+
+/* Group 2 - Middle elements */
+.animation-images__item.is--group2 {
+    display: block;
+    z-index: 2;
+    transform: scale(0.8);
+}
+
+/* Group 3 - Near elements */
+.animation-images__item.is--group3 {
+    display: block;
+    z-index: 3;
+    transform: scale(1);
+}
+
+/* Win effects */
+.win-animation-svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    width: 100%;
+}
+
+.win-animation-svg.is--active {
+    opacity: 1;
+}
+
+/* Wheel text effects */
+.wheel__texts-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1em !important;
+    padding-left: 2em !important;
+}
+
+.wheel__texts-block p {
+    transform: rotate(-7deg);
+}
+
+.wheel__texts-block p:only-child {
+    transform: rotate(0deg);
+}
+
+.wheel__texts-block p + p {
+    margin-top: 10px;
+    transform: rotate(7deg);
+}
+
+/* Wheel text positions */
+.wheel__texts-1,
+.wheel__texts-2 {
+    transform: rotate(-137deg);
+    position: absolute;
+    left: 11%;
+    top: 23%;
+}
+
+.wheel__texts-2 {
+    transform: rotate(-93deg);
+    left: 32%;
+    top: 14%;
+}
+
+.wheel__texts-3,
+.wheel__texts-4 {
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 54%;
+    top: 23%;
+}
+
+.wheel__texts-4 {
+    transform: rotate(-2deg);
+    left: 63%;
+    top: 44%;
+}
+
+.wheel__texts-5,
+.wheel__texts-6 {
+    transform: rotate(43deg);
+    position: absolute;
+    left: 54%;
+    top: 65%;
+}
+
+.wheel__texts-6 {
+    transform: rotate(87deg);
+    left: 33%;
+    top: 74%;
+}
+
+.wheel__texts-7,
+.wheel__texts-8 {
+    transform: rotate(133deg);
+    position: absolute;
+    left: 11%;
+    top: 66%;
+}
+
+.wheel__texts-8 {
+    transform: rotate(177deg);
+    left: 2%;
+    top: 45%;
+}
+
+/* State classes */
+.is--winner .reel .icons img:nth-child(2) {
+    transform: scaleY(-1);
+}
+
+body.is--winner .bottom__section {
+    opacity: 0;
+}
+
+.is--modal-open #slot {
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+    .animation-images {
+        font-size: 30%;
+    }
+}
+
+@media (max-width: 767px) {
+    .animation-images__item.is--group1 {
+        transform: scale(0.7);
+    }
+
+    .animation-images__item.is--group2 {
+        transform: scale(0.85);
+    }
+
+    .animation-images__item.is--group3 {
+        transform: scale(1);
+    }
+
+    .is--modal-open .right__person {
+        right: -22%;
+        bottom: -20%;
+    }
+}

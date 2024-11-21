@@ -1,0 +1,81 @@
+.dev-mode {
+    visibility: hidden;
+    display: none;
+}
+.dev-mode.is--active {
+    visibility: visible;
+    display: flex;
+}
+.dev-mode .menu-button  {
+    font-size: 20px;
+    color: #fff;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 999;
+    cursor: pointer;
+}
+.dev-mode .menu-button svg {
+    fill: #fff;
+    width: 30px;
+    height: 30px;
+}
+.dev-mode .menu-button .close {
+    display: none;
+}
+.dev-mode .menu-button.is--open .close {
+    display: flex;
+}
+.dev-mode .menu-button.is--open .open {
+    display: none;
+}
+.dev-mode {
+}
+.dev-mode__wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 998;
+    display: none;
+}
+.dev-mode__wrapper.is--open {
+    display: flex;
+}
+.dev-mode__wrapper:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    z-index: -1;
+}
+.dev-mode__wrapper form {
+    width: 100%;
+    padding: 30px;
+}
+.dev-mode__wrapper textarea {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.dev-mode__wrapper button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}

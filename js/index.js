@@ -3,13 +3,13 @@ const symbolCache = {};
 class SlotSymbol {
     constructor(symbolId = SlotSymbol.getRandomSymbol()) {
         this.id = symbolId;
-        this.templatePath = document.getElementById('reels')?.getAttribute('template/') || '';
+        this.templatePath = document.getElementById('reels')?.getAttribute('data-template') || 'default-template';
 
         if (symbolCache[symbolId]) {
             this.img = symbolCache[symbolId].cloneNode();
         } else {
             this.img = new Image();
-            this.img.src = '/assets/' + this.templatePath + 'images/' + symbolId + '.webp';
+            this.img.src = '/assets/' + this.templatePath + '/' + symbolId + '.webp';
             this.img.alt = 'icon-' + symbolId;
             symbolCache[symbolId] = this.img;
         }

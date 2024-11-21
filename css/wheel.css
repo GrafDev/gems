@@ -1,0 +1,121 @@
+
+
+
+/* Wheel */
+.wheel__spinner_win_1 {
+    animation: 3s spinTo1 ease-in-out forwards !important;
+}
+
+.wheel__spinner_win_2 {
+    animation: 3s spinTo2 ease-in-out forwards;
+}
+
+.wheel__spinner_win_3 {
+    animation: 3s spinTo3 ease-in-out forwards;
+}
+
+.wheel__spinner_win_4 {
+    animation: 3s spinTo4 ease-in-out forwards;
+}
+
+.wheel__spinner_win_5 {
+    animation: 3s spinTo5 ease-in-out forwards;
+}
+
+.wheel__spinner_win_6 {
+    animation: 3s spinTo6 ease-in-out forwards;
+}
+
+.wheel__spinner_win_7 {
+    animation: 3s spinTo7 ease-in-out forwards;
+}
+
+.wheel__spinner_win_8 {
+    animation: 3s spinTo8 ease-in-out forwards;
+}
+
+.is--win-spinner {
+    animation: 2s spinner-win ease-in-out infinite !important;
+}
+
+/* Wheel text blocks */
+.wheel__texts-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1em !important;
+    padding-left: 2em !important;
+}
+
+.wheel__texts-block p {
+    transform: rotate(-7deg);
+}
+
+.wheel__texts-block p:only-child {
+    transform: rotate(0deg);
+}
+
+.wheel__texts-block p + p {
+    margin-top: 10px;
+    transform: rotate(7deg);
+}
+
+.wheel__texts-1,
+.wheel__texts-2,
+.wheel__texts-3,
+.wheel__texts-4,
+.wheel__texts-5,
+.wheel__texts-6,
+.wheel__texts-7,
+.wheel__texts-8 {
+    position: absolute;
+}
+
+.wheel__texts-1 {
+    transform: rotate(-137deg);
+    left: 11%;
+    top: 23%;
+}
+
+.wheel__texts-2 {
+    transform: rotate(-93deg);
+    left: 32%;
+    top: 14%;
+}
+
+.wheel__texts-3 {
+    transform: rotate(-45deg);
+    left: 54%;
+    top: 23%;
+}
+
+.wheel__texts-4 {
+    transform: rotate(-2deg);
+    left: 63%;
+    top: 44%;
+}
+
+.wheel__texts-5 {
+    transform: rotate(43deg);
+    left: 54%;
+    top: 65%;
+}
+
+.wheel__texts-6 {
+    transform: rotate(87deg);
+    left: 33%;
+    top: 74%;
+}
+
+.wheel__texts-7 {
+    transform: rotate(133deg);
+    left: 11%;
+    top: 66%;
+}
+
+.wheel__texts-8 {
+    transform: rotate(177deg);
+    left: 2%;
+    top: 45%;
+}

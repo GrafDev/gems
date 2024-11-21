@@ -1,0 +1,39 @@
+/* Slot Components */
+.reel {
+    overflow: hidden;
+    width: 20%;
+    height: 100%;
+    position: relative;
+}
+
+.reel > .icons {
+    position: relative;
+}
+
+.reel > .icons > img {
+    width: calc(100% + 6px);
+    margin: -3px 0 0 -3px;
+    height: auto;
+    max-width: none;
+    transform: translate3d(0, 0, 0) scale(.9);
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#slot.inverted .reel {
+    transform: scaleY(-1);
+}
+
+#slot.inverted .reel > .icons > img {
+    transform: scaleY(-1) scale(.8);
+}
+
+.is--winner .reel .icons img:nth-child(2) {
+    transform: scaleY(-1);
+    animation: 2s flip ease-in-out infinite;
+}

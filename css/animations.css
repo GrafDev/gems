@@ -1,3 +1,30 @@
+
+/* Animation Images */
+.animation-images__item {
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+    z-index: 1;
+    width: auto;
+    opacity: 0;
+    animation: 1.5s fadeDown ease-in-out infinite;
+    display: none;
+}
+
+.animation-images__item.is--group1 {
+    display: block;
+}
+
+.animation-images__item.is--group2 {
+    animation: 2s fadeDown2 ease-in-out infinite;
+    display: block;
+}
+
+.animation-images__item.is--group3 {
+    animation: 3s fadeDown3 ease-in-out infinite;
+    display: block;
+}
+
 @keyframes rotation-loader {
     0% {
         transform: rotate(0deg)

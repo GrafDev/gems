@@ -42,19 +42,22 @@
     transition-delay: 0.5s;
 }
 
-/* Добавляем стили для модального окна */
-.is--modal-open #slot:not(.is--winner) {
+.is--modal-open #slot {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
 }
 
-.is--modal-open #slot.is--winner {
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Правило для сохранения видимости барабанов при выигрыше */
-.is--modal-open #slot.is--winner .reel {
+.is--modal-open .modal {
     opacity: 1;
     visibility: visible;
+    transition: all 0.3s ease-in-out;
+}
+
+.is--modal-open .logo,
+.is--modal-open .left__person,
+.is--modal-open .right__person,
+.is--modal-open .bottom__section {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }

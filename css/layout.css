@@ -62,18 +62,6 @@
     animation: personAnimation 5s ease-in-out infinite;
 }
 
-@media (max-width: 767px) {
-    .left__person {
-        display: none;
-    }
-
-    .right__person {
-        right: -30%;
-        bottom: -20px;
-        width: 50em;
-    }
-}
-
 /* Bottom section */
 .bottom__section {
     position: relative;
@@ -241,9 +229,15 @@ body.is--winner .bottom__section {
 
 @media (max-width: 767px) {
     .is--modal-open .right__person {
-        right: -22%;
-        bottom: -20%;
+        display: none !important;
     }
+    .right__person{
+        display: none !important;
+    }
+    .left__person{
+        display: none !important;
+    }
+
 }
 
 .is--modal-open .logo.is--mobile {

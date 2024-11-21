@@ -6,7 +6,7 @@ const urlsToCache = [
     '/assets/sound/start-sound.mp3',
     '/assets/sound/win-sound.mp3',
     '/css/style.css',
-    '/js/app.js',
+    '/js/ImageGroupsSetup.js',
     '/js/common.js',
     '/js/index.js'
 ];

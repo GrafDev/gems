@@ -7,6 +7,29 @@
     opacity: 1;
 }
 
+.body-wrapper[data-bg],
+.modal__container[data-bg],
+.left__person[data-bg],
+.right__person[data-bg] {
+    transition: background-image 1s ease-in-out;
+}
+
+.body-wrapper.bg-loaded,
+.modal__container.bg-loaded,
+.left__person.bg-loaded,
+.right__person.bg-loaded {
+    animation: fadeInBg 1s ease-in-out forwards;
+}
+
+@keyframes fadeInBg {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .logo,
 .left__person,
 .right__person,

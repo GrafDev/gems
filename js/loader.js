@@ -9,29 +9,31 @@ function increaseLoaderProgress() {
         if (width >= 99) {
             progressLine.style.width = '100%';
         } else {
-            width += 2;
+            width += 5; // Ускорим прогресс
             progressLine.style.width = width + '%';
         }
-    }, 1000);
+    }, 50); // Уменьшим интервал
 }
 
 function addLoadedClass() {
     loader.classList.add('is--loaded');
-    // Добавляем небольшую задержку перед показом контента
     setTimeout(() => {
         bodyWrapper.classList.add('is--visible');
     }, 100);
 }
 
 function setLoaderProgressTo100() {
-    setTimeout(() => {
-        progressLine.style.width = '100%';
-        clearInterval(progressInterval);
-        setTimeout(() => {
-            addLoadedClass();
-        }, 800)
-    }, 600)
+    progressLine.style.width = '100%';
+    clearInterval(progressInterval);
+    setTimeout(addLoadedClass, 300);
 }
 
 increaseLoaderProgress();
-window.addEventListener('load', setLoaderProgressTo100);
+
+// Ждем только загрузку DOM
+document.addEventListener('DOMContentLoaded', setLoaderProgressTo100);
+
+// Страховка, если DOMContentLoaded уже произошел
+if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    setLoaderProgressTo100();
+}

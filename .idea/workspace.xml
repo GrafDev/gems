@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19b5e136-8021-409b-98a1-de38b0fbb17d" name="Changes" comment="make lazy loading, fix bg's bag">
+    <list default="true" id="19b5e136-8021-409b-98a1-de38b0fbb17d" name="Changes" comment="fix right_person">
+      <change afterPath="$PROJECT_DIR$/js/background-lazy-loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/loader.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/loader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/modal.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/sw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/loader.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +28,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="gh-pages" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
@@ -38,6 +46,16 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/GrafDev/gems.git&quot;,
     &quot;accountId&quot;: &quot;174ffccd-0889-4d86-ba61-af0fc74c4657&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;GrafDev&quot;,
+    &quot;repository&quot;: &quot;gems&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -51,25 +69,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.Gates of Olympus.html.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
-    "Node.js.sw.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.codeium.enabled": "true",
-    "git-widget-placeholder": "gh-pages",
-    "last_opened_file_path": "/home/graf/WebstormProjects/gems/pages",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.Gates of Olympus.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.loader.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.sw.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;gh-pages-lazy&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/graf/WebstormProjects/gems/pages&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pages" />
@@ -98,6 +118,9 @@
       <option name="presentableId" value="Default" />
       <updated>1732208035346</updated>
       <workItem from="1732208036347" duration="24930000" />
+      <workItem from="1732279460845" duration="27000" />
+      <workItem from="1732279494464" duration="5032000" />
+      <workItem from="1732286777654" duration="390000" />
     </task>
     <task id="LOCAL-00001" summary="Check css">
       <option name="closed" value="true" />
@@ -179,7 +202,31 @@
       <option name="project" value="LOCAL" />
       <updated>1732265039064</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="repeared">
+      <option name="closed" value="true" />
+      <created>1732271280942</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732271280942</updated>
+    </task>
+    <task id="LOCAL-00012" summary="repeared">
+      <option name="closed" value="true" />
+      <created>1732272172015</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732272172015</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix right_person">
+      <option name="closed" value="true" />
+      <created>1732278807131</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732278807131</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +250,8 @@
     <MESSAGE value="git-pages" />
     <MESSAGE value="make lazy loading" />
     <MESSAGE value="make lazy loading, fix bg's bag" />
-    <option name="LAST_COMMIT_MESSAGE" value="make lazy loading, fix bg's bag" />
+    <MESSAGE value="repeared" />
+    <MESSAGE value="fix right_person" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix right_person" />
   </component>
 </project>

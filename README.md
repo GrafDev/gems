@@ -12,7 +12,6 @@ project/
 │   ├── base.css
 │   ├── button.css
 │   ├── content-fade.css
-│   ├── dev-mode.css
 │   ├── layout.css
 │   ├── loader.css
 │   ├── media.css
@@ -22,7 +21,6 @@ project/
 │   └── wheel.css
 ├── js/
 │   ├── common.js
-│   ├── dev-mode.js
 │   ├── ImageGroupsSetup.js
 │   ├── index.js
 │   └── loader.js

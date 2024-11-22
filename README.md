@@ -23,7 +23,7 @@ project/
 │   ├── common.js
 │   ├── dev-mode.js
 │   ├── background-lazy-loader.js
-│   ├── ImageGroupsSetup.js
+│   ├── image-groups-setup.js
 │   ├── index.js
 │   └── loader.js
 ├── pages/

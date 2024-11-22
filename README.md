@@ -25,8 +25,7 @@ project/
 │   ├── dev-mode.js
 │   ├── ImageGroupsSetup.js
 │   ├── index.js
-│   ├── loader.js
-│   └── main.js
+│   └── loader.js
 ├── pages/
 │   └── win-button-page.html
 ├── index.html

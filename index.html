@@ -23,28 +23,6 @@
     <link rel="stylesheet" href="css/style.css" >
 <!--    <link href="css/content-fade.css" rel="stylesheet">-->
     <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
-
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 800;
-        }
-    </style>
-
-    <style>
-        .loader {
-            background: linear-gradient(180deg, #9E8FE7 0%, #F189C3 100%);
-        }
-
-        .loader__progress-line {
-            background: linear-gradient(to right, #53177F, #DD4EFF);
-        }
-
-        .loader__progress {
-            background: linear-gradient(304deg, #FFF6BC 0%, #E4AC28 35%, #D04B00 49%, #E07900 63%, #FDEAAC 100%);
-        }
-    </style>
-
     <script src="sw.js"></script>
 </head>
 <body>
@@ -54,11 +32,11 @@
         <div class="loader__progress-line"></div>
     </div>
 </div>
-<div class="body-wrapper">
-    <div class="left__person">
+<div class="body-wrapper" data-bg>
+    <div class="left__person" data-bg>
         <img src="assets/images/left-person.webp" alt="left-person">
     </div>
-    <div class="right__person">
+    <div class="right__person" data-bg>
         <img src="assets/images/right-person.webp" alt="left-person">
     </div>
     <div class="animation-images">
@@ -94,8 +72,8 @@
 
     </div>
 
-    <div class="modal" id="modal">
-        <div class="modal__container">
+    <div class="modal" id="modal" >
+        <div class="modal__container" data-bg>
             <div class="modal__title">
                 <span>তুমি জিতেছ</span>
             </div>
@@ -120,6 +98,7 @@
     </div>
 </div>
 
+<script src="js/background-lazy-loader.js"></script>
 <script src="js/loader.js"></script>
 <script src="js/common.js"></script>
 <script src="js/ImageGroupsSetup.js"></script>

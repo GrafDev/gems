@@ -17,7 +17,6 @@
     max-width: 1105px;
     width: 100%;
     height: 100%;
-    background-image: url(../assets/images/modal-background.webp);  /* Добавляем это */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -68,22 +67,7 @@
     margin-top: 23%;
 }
 
-/* Modal states */
-.is--modal-open .modal {
-    transform: scale(1);
-    transition: all .3s ease-in-out;
-}
-
-.is--modal-open .modal .bottom__section-button {
-    display: flex;
-}
-
-.is--modal-open .bottom__section,
-.is--modal-open .wheel {
-    opacity: 0;
-}
-
-/* Mobile styles */
+/* Media queries */
 @media (max-width: 767px) {
     .modal__container {
         padding: 0;
@@ -111,46 +95,14 @@
     }
 }
 
-/* Animation keyframes */
-@keyframes modalFadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Loading state */
-.modal__container.is-loading {
-    position: relative;
-}
-
-.modal__container.is-loading::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-/* Transition states */
-.modal.entering {
-    animation: modalFadeIn 0.3s ease-in-out;
-}
-
-.modal.exiting {
-    animation: modalFadeIn 0.3s ease-in-out reverse;
-}
-
+/* States */
 .is--modal-open .modal {
-    transform: scale(1) !important;
-    opacity: 1 !important;
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease-in-out;
 }
 
-.is--modal-open .modal__container {
-    opacity: 1 !important;
+.is--modal-open .modal .bottom__section-button {
+    display: flex;
 }

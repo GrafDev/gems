@@ -1,3 +1,8 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+
 .loader {
     position: fixed;
     top: 0;
@@ -12,15 +17,19 @@
     height: 100vh;
     padding: 15px;
     display: flex;
+    background: linear-gradient(180deg, #9E8FE7 0%, #F189C3 100%);
 }
+
 .loader.is--loaded {
     display: none;
 }
+
 .loader__logo {
     margin-bottom: 35px;
     width: 100%;
     max-width: 400px;
 }
+
 .loader__progress {
     width: 100%;
     height: 28px;
@@ -28,7 +37,9 @@
     padding: 4px;
     border-radius: 100px;
     position: relative;
+    background: linear-gradient(304deg, #FFF6BC 0%, #E4AC28 35%, #D04B00 49%, #E07900 63%, #FDEAAC 100%);
 }
+
 .loader__progress::before {
     position: absolute;
     content: '';
@@ -39,6 +50,7 @@
     height: calc(100% - 8px);
     background-color: #fff;
 }
+
 .loader__progress-line {
     position: relative;
     z-index: 2;
@@ -46,7 +58,9 @@
     height: 100%;
     border-radius: 100px;
     transition: width 0.5s ease;
+    background: linear-gradient(to right, #53177F, #DD4EFF);
 }
+
 @media (max-width: 767px) {
     .loader__progress {
         max-width: 220px;

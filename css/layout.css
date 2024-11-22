@@ -9,13 +9,15 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(../assets/images/page-bg.webp);
     overflow: hidden;
+}
+
+.body-wrapper.bg-loaded {
+    transition: background-image 0.3s ease-in-out;
 }
 
 @media (max-width: 767px) {
     .body-wrapper {
-        background-image: url(../assets/images/page-bg-mobile.webp);
         background-position: center;
     }
 }
@@ -60,6 +62,18 @@
     right: 0;
     font-size: 30%;
     animation: personAnimation 5s ease-in-out infinite;
+}
+
+@media (max-width: 767px) {
+    .left__person {
+        display: none;
+    }
+
+    .right__person {
+        right: -30%;
+        bottom: -20px;
+        width: 50em;
+    }
 }
 
 /* Bottom section */
@@ -199,12 +213,14 @@
     background-position: center;
     background-size: contain;
     z-index: 2;
-    background-image: url(../assets/images/frame.webp);
+}
+
+.background.bg-loaded {
+    transition: background-image 0.3s ease-in-out;
 }
 
 @media (max-width: 991px) {
     .background {
-        background-image: url(../assets/images/frame-mobile.webp);
         background-size: cover;
     }
 }
@@ -229,15 +245,9 @@ body.is--winner .bottom__section {
 
 @media (max-width: 767px) {
     .is--modal-open .right__person {
-        display: none !important;
+        right: -22%;
+        bottom: -20%;
     }
-    .right__person{
-        display: none !important;
-    }
-    .left__person{
-        display: none !important;
-    }
-
 }
 
 .is--modal-open .logo.is--mobile {

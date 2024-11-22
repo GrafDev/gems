@@ -12,7 +12,6 @@
     }
 
     .background {
-        background-image: url(../assets/images/frame-mobile.webp);
         background-size: cover;
     }
 
@@ -32,14 +31,18 @@
     .animation-images {
         font-size: 30%;
     }
+
+    /* Background lazy loading */
+    .body-wrapper[data-bg] {
+        transition: background-image 0.3s ease-in-out;
+    }
 }
 
 /* Mobile */
 @media (max-width: 767px) {
     /* Layout */
-    .body-wrapper {
-        background-image: url(../assets/images/page-bg-mobile.webp);
-        background-position: center;
+    .body-wrapper[data-bg] {
+        transition-duration: 0.2s; /* Ускоряем анимацию на мобильных */
     }
 
     /* Logo */
@@ -76,7 +79,11 @@
     .modal__container {
         padding: 0;
         height: auto;
+    }
+
+    .modal__container[data-bg] {
         background-size: 120%;
+        transition-duration: 0.2s;
     }
 
     .modal__logo {
@@ -101,6 +108,11 @@
     .is--modal-open .right__person {
         right: -22%;
         bottom: -20%;
+    }
+
+    /* Background loading optimization */
+    .bg-loaded {
+        will-change: background-image;
     }
 }
 
@@ -129,12 +141,23 @@
     .bottom__section-button:after {
         right: -164px;
     }
+
+    /* Background loading optimization */
+    .bg-loaded {
+        transform: translateZ(0); /* Hardware acceleration */
+    }
 }
 
 /* Landscape Mode */
 @media (orientation: landscape) {
     .body-wrapper {
         overflow-y: scroll;
+    }
+
+    /* Background loading optimization */
+    .body-wrapper[data-bg] {
+        will-change: background-image;
+        transform: translateZ(0);
     }
 }
 
@@ -150,5 +173,35 @@
 
     .animation-images__item.is--group3 {
         animation: 2.5s fadeDown3Mobile ease-in-out infinite;
+    }
+
+    /* Background loading performance */
+    .bg-loaded {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .bg-loaded {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+    .body-wrapper[data-bg],
+    .modal__container[data-bg],
+    .bg-loaded {
+        transition: none !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .bg-loaded {
+        background-image: none !important;
     }
 }

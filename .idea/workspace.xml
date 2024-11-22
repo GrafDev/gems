@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19b5e136-8021-409b-98a1-de38b0fbb17d" name="Changes" comment="fix css">
-      <change afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+    <list default="true" id="19b5e136-8021-409b-98a1-de38b0fbb17d" name="Changes" comment="git-pages">
+      <change afterPath="$PROJECT_DIR$/js/background-lazy-loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/base.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/media.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/media.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/modal.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ImageGroupsSetup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/sw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,22 +29,23 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "GrafDev"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;GrafDev&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/GrafDev/gems.git",
-    "accountId": "174ffccd-0889-4d86-ba61-af0fc74c4657"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/GrafDev/gems.git&quot;,
+    &quot;accountId&quot;: &quot;174ffccd-0889-4d86-ba61-af0fc74c4657&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2pATm0ZZROUgRli6dZ59YKspzPT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -58,9 +59,10 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "JavaScript Debug.Gates of Olympus.html.executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
+    "Node.js.sw.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.codeium.enabled": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "gh-pages",
     "last_opened_file_path": "/home/graf/WebstormProjects/gems/pages",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -98,7 +100,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732208035346</updated>
-      <workItem from="1732208036347" duration="22032000" />
+      <workItem from="1732208036347" duration="24930000" />
     </task>
     <task id="LOCAL-00001" summary="Check css">
       <option name="closed" value="true" />
@@ -116,15 +118,76 @@
       <option name="project" value="LOCAL" />
       <updated>1732228447260</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix bag with left right person on mobile">
+      <option name="closed" value="true" />
+      <created>1732230700060</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732230700060</updated>
+    </task>
+    <task id="LOCAL-00004" summary="git-pages">
+      <option name="closed" value="true" />
+      <created>1732231139001</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732231139001</updated>
+    </task>
+    <task id="LOCAL-00005" summary="git-pages">
+      <option name="closed" value="true" />
+      <created>1732231713936</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732231713936</updated>
+    </task>
+    <task id="LOCAL-00006" summary="git-pages">
+      <option name="closed" value="true" />
+      <created>1732231914920</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732231914920</updated>
+    </task>
+    <task id="LOCAL-00007" summary="git-pages">
+      <option name="closed" value="true" />
+      <created>1732232825713</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732232825713</updated>
+    </task>
+    <task id="LOCAL-00008" summary="git-pages">
+      <option name="closed" value="true" />
+      <created>1732233418948</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732233418948</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Check css" />
     <MESSAGE value="fix css" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix css" />
+    <MESSAGE value="fix bag with left right person on mobile" />
+    <MESSAGE value="git-pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="git-pages" />
   </component>
 </project>

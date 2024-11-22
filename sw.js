@@ -20,7 +20,7 @@ const CORE_ASSETS = [
     'assets/sound/win-sound.mp3',
     'css/style.css',
     'js/background-lazy-loader.js',
-    'js/ImageGroupsSetup.js',
+    'js/image-groups-setup.js',
     'js/common.js',
     'js/index.js'
 ];

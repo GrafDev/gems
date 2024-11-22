@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19b5e136-8021-409b-98a1-de38b0fbb17d" name="Changes" comment="add lazy bg" />
+    <list default="true" id="19b5e136-8021-409b-98a1-de38b0fbb17d" name="Changes" comment="add lazy bg">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/background-lazy-loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/background-lazy-loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/loader.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +77,7 @@
     "Node.js.sw.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.codeium.enabled": "true",
-    "git-widget-placeholder": "#7 on gh-pages-lazy",
+    "git-widget-placeholder": "gh-pages-lazy",
     "last_opened_file_path": "/home/graf/WebstormProjects/gems/pages",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -112,7 +118,8 @@
       <workItem from="1732208036347" duration="24930000" />
       <workItem from="1732279460845" duration="27000" />
       <workItem from="1732279494464" duration="5032000" />
-      <workItem from="1732286777654" duration="715000" />
+      <workItem from="1732286777654" duration="1604000" />
+      <workItem from="1732306989409" duration="1349000" />
     </task>
     <task id="LOCAL-00001" summary="Check css">
       <option name="closed" value="true" />
@@ -226,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732287430194</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add lazy bg">
+      <option name="closed" value="true" />
+      <created>1732287591376</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732287591376</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

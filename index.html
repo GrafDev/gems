@@ -5,44 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
     <title>Gates of Olympus</title>
-    <link rel="icon" type="image/webp" sizes="16x16" href="/assets/images/favicon-16x16.webp">
-    <link rel="icon" type="image/webp" sizes="32x32" href="/assets/images/favicon-32x32.webp">
-    <link rel="apple-touch-icon" type="image/webp" sizes="180x180" href="/assets/images/apple-touch-icon.webp">
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/webp" sizes="16x16" href="./assets/images/favicon-16x16.webp">
+    <link rel="icon" type="image/webp" sizes="32x32" href="./assets/images/favicon-32x32.webp">
+    <link rel="apple-touch-icon" type="image/webp" sizes="180x180" href="./assets/images/apple-touch-icon.webp">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./css/style.css">
+    <base href="./">
 </head>
 <body>
 <div class="loader">
-    <img src="assets/images/logo.webp" alt="logo" class="loader__logo">
+    <img src="./assets/images/logo.webp" alt="logo" class="loader__logo">
     <div class="loader__progress">
         <div class="loader__progress-line"></div>
     </div>
 </div>
 
-<div class="body-wrapper" data-bg="assets/images/page-bg.webp">
+<div class="body-wrapper" data-bg="./assets/images/page-bg.webp">
     <div class="left__person">
-        <img src="assets/images/left-person.webp" alt="left-person">
+        <img src="./assets/images/left-person.webp" alt="left-person">
     </div>
 
     <div class="right__person">
-        <img src="assets/images/right-person.webp" alt="right-person">
+        <img src="./assets/images/right-person.webp" alt="right-person">
     </div>
 
     <div class="animation-images">
-        <img src="assets/images/1.webp" alt="1" class="animation-images__item is--1" loading="lazy">
-        <img src="assets/images/2.webp" alt="2" class="animation-images__item is--2" loading="lazy">
-        <img src="assets/images/3.webp" alt="3" class="animation-images__item is--3" loading="lazy">
-        <img src="assets/images/4.webp" alt="4" class="animation-images__item is--4" loading="lazy">
-        <img src="assets/images/5.webp" alt="5" class="animation-images__item is--5" loading="lazy">
-        <img src="assets/images/6.webp" alt="6" class="animation-images__item is--6" loading="lazy">
-        <img src="assets/images/7.webp" alt="7" class="animation-images__item is--7" loading="lazy">
-        <img src="assets/images/8.webp" alt="8" class="animation-images__item is--8" loading="lazy">
+        <img src="./assets/images/1.webp" alt="1" class="animation-images__item is--1" loading="lazy">
+        <img src="./assets/images/2.webp" alt="2" class="animation-images__item is--2" loading="lazy">
+        <img src="./assets/images/3.webp" alt="3" class="animation-images__item is--3" loading="lazy">
+        <img src="./assets/images/4.webp" alt="4" class="animation-images__item is--4" loading="lazy">
+        <img src="./assets/images/5.webp" alt="5" class="animation-images__item is--5" loading="lazy">
+        <img src="./assets/images/6.webp" alt="6" class="animation-images__item is--6" loading="lazy">
+        <img src="./assets/images/7.webp" alt="7" class="animation-images__item is--7" loading="lazy">
+        <img src="./assets/images/8.webp" alt="8" class="animation-images__item is--8" loading="lazy">
     </div>
 
-    <img src="assets/images/logo.webp" alt="logo" class="logo">
+    <img src="./assets/images/logo.webp" alt="logo" class="logo">
 
     <div id="slot" data-spin="1">
-        <div class="background" data-bg="assets/images/frame.webp"></div>
+        <div class="background" data-bg="./assets/images/frame.webp"></div>
 
         <div id="reels" data-template="images">
             <div class="reel"></div>
@@ -62,7 +63,7 @@
     </div>
 
     <div id="modal" class="modal">
-        <div class="modal__container" data-bg="assets/images/modal-background.webp">
+        <div class="modal__container" data-bg="./assets/images/modal-background.webp">
             <div class="modal__title">
                 তুমি জিতেছ
             </div>
@@ -71,7 +72,7 @@
                 স্বাগতম বোনাস %700:
             </div>
 
-            <a href="pages/win-button-page.html" id="win-button-modal" class="bottom__section-button is--link">
+            <a href="./pages/win-button-page.html" id="win-button-modal" class="bottom__section-button is--link">
                 বোনাস দাবি করুন
                 <div class="button-loader">
                     <span></span>
@@ -81,7 +82,7 @@
     </div>
 
     <div class="effects hidden">
-        <img src="assets/effects/descktop_strike_flashing.gif"
+        <img src="./assets/effects/descktop_strike_flashing.gif"
              id="effects-image"
              class="effects__image hidden"
              alt="effects"
@@ -110,17 +111,20 @@
 
 <!-- Scripts -->
 <script>
-    if ('serviceWorker' in navigator) {
+    // Проверяем поддержку ServiceWorker и регистрируем его только если на продакшене
+    if ('serviceWorker' in navigator && window.location.hostname !== 'localhost') {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js');
+            navigator.serviceWorker.register('./sw.js').catch(error => {
+                console.log('ServiceWorker registration failed:', error);
+            });
         });
     }
 </script>
-<script src="js/background-lazy-loader.js" type="module"></script>
-<script src="js/ImageGroupsSetup.js"></script>
-<script src="js/common.js"></script>
-<script src="js/loader.js"></script>
-<!--<script src="js/dev-mode.js"></script>-->
-<script src="js/index.js"></script>
+<script src="./js/background-lazy-loader.js" type="module"></script>
+<script src="./js/ImageGroupsSetup.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/loader.js"></script>
+<!--<script src="./js/dev-mode.js"></script>-->
+<script src="./js/index.js"></script>
 </body>
 </html>

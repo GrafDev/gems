@@ -62,12 +62,7 @@
     animation: personAnimation 5s ease-in-out infinite;
 }
 
-@media (max-width: 690px) {
-    .left__person,
-    .right__person {
-        display: none !important;
-    }
-}
+
 
 /* Bottom section */
 .bottom__section {
@@ -84,6 +79,12 @@
 @media (max-width: 767px) {
     .bottom__section {
         margin-top: 20%;
+    }
+    .right__person{
+        display: none;
+    }
+    .left__person {
+        display: none;
     }
 }
 

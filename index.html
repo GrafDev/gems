@@ -1,49 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE html>
-<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=0.9, maximum-scale=0.9, minimum-scale=0.9, viewport-fit=cover">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" data-qmeta="equiv">
+    <meta name="theme-color" content="#FFFFFF">
+    <meta name="google" value="notranslate">
+    <meta name="Description" content="Gates of Olympus">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-title" content="Gates of Olympus">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
     <title>Gates of Olympus</title>
 
-    <style>
-        .loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            z-index: 999;
-            background: linear-gradient(180deg, #9E8FE7 0%, #F189C3 100%);
-        }
 
-        .loader__logo {
-            width: 100%;
-            max-width: 400px;
-            margin-bottom: 35px;
-        }
-
-        .loader__progress {
-            width: 100%;
-            max-width: 340px;
-            height: 28px;
-            position: relative;
-        }
-    </style>
-
-    <link rel="preload" href="assets/images/logo.webp" as="image">
-    <link rel="preload" href="css/loader.css" as="style">
-    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
-    <script defer src="js/loader.js"></script>
-    <script defer src="js/background-lazy-loader.js"></script>
-    <script defer src="js/index.js"></script>
-
-    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.webp">
+    <link rel="mask-icon" href="https://ndostore.shop/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="css/style.css" >
+<!--    <link href="css/content-fade.css" rel="stylesheet">-->
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    <script src="sw.js"></script>
 </head>
 <body>
 <div class="loader">
@@ -118,8 +98,11 @@
     </div>
 </div>
 
-<script src="js/common.js"></script>
-<script src="js/image-groups-setup.js"></script>
+<script defer src="js/background-lazy-loader.js"></script>
+<script defer src="js/loader.js"></script>
+<script defer src="js/common.js"></script>
+<script defer src="js/image-groups-setup.js"></script>
+<script defer src="js/index.js"></script>
 
 
 </body>
